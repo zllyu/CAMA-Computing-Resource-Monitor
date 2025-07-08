@@ -1,0 +1,3 @@
+0 10 * * * /usr/bin/flock -n /tmp/resource_monitor.lock /bin/bash /home/local/PARTNERS/zl8/camca_resource_monitor/resource_monitor.sh >> /home/local/PARTNERS/zl8/camca_resource_monitor/resource_monitor.log 2>&1
+
+10 10 * * * /usr/bin/flock -n /tmp/resource_monitor.lock /home/local/PARTNERS/zl8/miniforge3/bin/python /home/local/PARTNERS/zl8/camca_resource_monitor/resource_monitor_llm_v02.py >> /home/local/PARTNERS/zl8/camca_resource_monitor/daily_summary_running_logs.log 2>&1
